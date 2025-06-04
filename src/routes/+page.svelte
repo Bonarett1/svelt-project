@@ -1,4 +1,5 @@
 <script lang="ts">
+    import ChatHistory from "$src/components/chatHistory.svelte";
     import Chatinp from "$src/components/chatinp.svelte";
 
 </script>
@@ -14,3 +15,4 @@
 
 </slot>
 <Chatinp></Chatinp>
+<ChatHistory input={"hallo borchewrs"}> </ChatHistory>
