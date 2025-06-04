@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+
+body{
+    background-image: url("/src/ressources/supergraphic.jpg");
+    background-size: 100vw 1vh;
+
+    background-repeat: no-repeat;
+}
