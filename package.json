@@ -1,49 +1,119 @@
 {
-	"name": "teste",
-	"version": "0.0.1",
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build && npm run prepack",
-		"preview": "vite preview",
-		"prepare": "svelte-kit sync || echo ''",
-		"prepack": "svelte-kit sync && svelte-package && publint",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
-	},
-	"files": [
-		"dist",
-		"!dist/**/*.test.*",
-		"!dist/**/*.spec.*"
-	],
-	"sideEffects": [
-		"**/*.css"
-	],
-	"svelte": "./dist/index.js",
-	"types": "./dist/index.d.ts",
-	"type": "module",
-	"exports": {
-		".": {
-			"types": "./dist/index.d.ts",
-			"svelte": "./dist/index.js"
-		}
-	},
-	"peerDependencies": {
-		"svelte": "^5.0.0"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^6.0.0",
-		"@sveltejs/kit": "^2.16.0",
-		"@sveltejs/package": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^5.0.0",
-		"@tailwindcss/vite": "^4.1.8",
-		"publint": "^0.3.2",
-		"svelte": "^5.0.0",
-		"svelte-check": "^4.0.0",
-		"tailwindcss": "^4.1.8",
-		"typescript": "^5.0.0",
-		"vite": "^6.2.6"
-	},
-	"keywords": [
-		"svelte"
-	]
+  "name": "teste",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build && npm run prepack",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync || echo ''",
+    "prepack": "svelte-kit sync && svelte-package && publint",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.test.*",
+    "!dist/**/*.spec.*"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "svelte": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    }
+  },
+  "peerDependencies": {
+    "svelte": "^5.0.0"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^6.0.0",
+    "@sveltejs/kit": "^2.16.0",
+    "@sveltejs/package": "^2.0.0",
+    "@sveltejs/vite-plugin-svelte": "^5.0.0",
+    "@tailwindcss/vite": "^4.1.8",
+    "publint": "^0.3.2",
+    "svelte": "^5.0.0",
+    "svelte-check": "^4.0.0",
+    "tailwindcss": "^4.1.8",
+    "typescript": "^5.0.0",
+    "vite": "^6.2.6"
+  },
+  "keywords": [
+    "svelte"
+  ],
+  "description": "Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).",
+  "main": "svelte.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bonarett1/svelt-project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bonarett1/svelt-project/issues"
+  },
+  "homepage": "https://github.com/Bonarett1/svelt-project#readme",
+  "dependencies": {
+    "aria-query": "^5.3.2",
+    "chokidar": "^4.0.3",
+    "acorn": "^8.14.1",
+    "chownr": "^3.0.0",
+    "clsx": "^2.1.1",
+    "axobject-query": "^4.1.0",
+    "cookie": "^0.6.0",
+    "debug": "^4.4.1",
+    "dedent-js": "^1.0.1",
+    "detect-libc": "^2.0.4",
+    "deepmerge": "^4.3.1",
+    "devalue": "^5.1.1",
+    "esrap": "^1.4.6",
+    "enhanced-resolve": "^5.18.1",
+    "esbuild": "^0.25.5",
+    "esm-env": "^1.2.2",
+    "fdir": "^6.4.5",
+    "graceful-fs": "^4.2.11",
+    "is-reference": "^3.0.3",
+    "kleur": "^4.1.5",
+    "jiti": "^2.4.2",
+    "lightningcss": "^1.30.1",
+    "lightningcss-linux-x64-gnu": "^1.30.1",
+    "lightningcss-linux-x64-musl": "^1.30.1",
+    "locate-character": "^3.0.0",
+    "minipass": "^7.1.2",
+    "magic-string": "^0.30.17",
+    "lower-case": "^2.0.2",
+    "mkdirp": "^3.0.1",
+    "minizlib": "^3.0.2",
+    "mri": "^1.2.0",
+    "ms": "^2.1.3",
+    "mrmime": "^2.0.1",
+    "nanoid": "^3.3.11",
+    "no-case": "^3.0.4",
+    "package-manager-detector": "^1.3.0",
+    "pascal-case": "^3.1.2",
+    "picocolors": "^1.1.1",
+    "picomatch": "^4.0.2",
+    "postcss": "^8.5.4",
+    "readdirp": "^4.1.2",
+    "rollup": "^4.41.1",
+    "sade": "^1.8.1",
+    "semver": "^7.7.2",
+    "source-map-js": "^1.2.1",
+    "set-cookie-parser": "^2.7.1",
+    "sirv": "^3.0.1",
+    "tapable": "^2.2.2",
+    "tinyglobby": "^0.2.14",
+    "tar": "^7.4.3",
+    "svelte2tsx": "^0.7.39",
+    "totalist": "^3.0.1",
+    "vitefu": "^1.0.6",
+    "tslib": "^2.8.1",
+    "yallist": "^5.0.0",
+    "zimmerframe": "^1.1.2"
+  }
 }

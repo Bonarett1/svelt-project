@@ -19,3 +19,4 @@
 <style>
 
 </style>
+<div class="h-45 w-50 bg-red-500">Component testInput</div> 
