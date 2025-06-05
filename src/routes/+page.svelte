@@ -4,9 +4,6 @@
 
 </script>
 
-<h1>Welcome to your library project</h1>
-<p>Create your package using @sveltejs/package and preview/showcase your work with SvelteKit</p>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
 
 <div class="border-2 bg-red-50">
 
@@ -15,5 +12,7 @@
 <slot>
 
 </slot>
-<Chatinp></Chatinp>
-<ChatHistory input={"hallo borchewrs"}> </ChatHistory>
+<div class="w-4/5">
+    <ChatHistory input={"erzähl mir was über die kantine im 2ten weltkrieg aus der sicht eines amerikanischen soldate"}> </ChatHistory>
+</div>
+<Chatinp> </Chatinp>

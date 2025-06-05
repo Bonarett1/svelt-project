@@ -16,7 +16,7 @@
                     
                     {
                         role: "user",
-                        content: "input"
+                        content: input
                     }
                 ],
                 stream: false
@@ -31,11 +31,13 @@
     });
 </script>
 
-<div>Hier:</div>
+<div>{input}</div>
+<div class="wrap-anywhere w-4/5">
 {#if retVal}
-    <pre>{JSON.stringify(retVal.message.content, null, 2)}</pre>
+    <p>{JSON.stringify(retVal.message.content, null, 2)}</p>
 {:else if fetchError}
     <p>Error: {fetchError.message}</p>
 {:else}
     <p>Loading...</p>
 {/if}
+</div>
