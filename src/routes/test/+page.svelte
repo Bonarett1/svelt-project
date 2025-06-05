@@ -1,19 +1,19 @@
 <script lang="ts">
   import ChatHistory from "$src/components/chatHistory.svelte";
   import Chatinp from "$src/components/chatinp.svelte";
-    import { json } from "@sveltejs/kit";
+  import { json } from "@sveltejs/kit";
   import axios from "axios";
-    import { parse } from "cookie";
+  import { parse } from "cookie";
 
   let inputText: string = "";
   let inputElement: HTMLInputElement;
   let retVal: any;
-  let inputTextPushed: string
+  let inputTextPushed: string;
 
   async function handleSendMessage(): Promise<void> {
-    const child=document.createElement("p")
-    child.textContent=inputText;
-    document.getElementById("messages-container")?.appendChild(child)
+    const child = document.createElement("p");
+    child.textContent = inputText;
+    document.getElementById("messages-container")?.appendChild(child);
     inputTextPushed = inputText;
     console.log(inputText);
     try {
@@ -24,20 +24,19 @@
             role: "user",
             content: inputText,
           },
+
         ],
-        stream: false,
+        stream: true,
       });
       retVal = res.data;
-    const content = retVal?.message?.content ?? "No content returned";
+      const content = retVal?.message?.content ?? "No content returned";
 
-    // Append bot response
-    const botMsg: HTMLParagraphElement = document.createElement("p");
-    botMsg.className = "text-left text-gray-800";
-    botMsg.textContent = content;
-    document.getElementById("messages-container")?.appendChild(botMsg);
-
+      // Append bot response
+      const botMsg: HTMLParagraphElement = document.createElement("p");
+      botMsg.className = "text-left text-gray-800";
+      botMsg.textContent = content;
+      document.getElementById("messages-container")?.appendChild(botMsg);
     } catch (e) {
-      //fetchError = e;
       console.error("Fetch error:", e);
     }
   }
@@ -59,8 +58,7 @@
       <div
         id="messages-container"
         class="flex-grow overflow-y-auto p-6 space-y-4"
-      >
-    </div>
+      ></div>
 
       <div class="p-6 border-t border-gray-200 bg-white">
         <div
