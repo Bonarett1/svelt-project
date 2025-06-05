@@ -8,7 +8,7 @@
     let retVal: any = null;
     let fetchError: any = null; 
 
-    onMount(async () => {
+    const requestAi = async () => {
         try {
             const res = await axios.post("http://192.168.88.18:11434/api/chat", {
                 model: "xorchers:latest",    
@@ -28,6 +28,10 @@
             fetchError = e;
             console.error("Fetch error:", e);
         }
+    }
+
+    onMount(async () => {
+        await requestAi();
     });
 </script>
 
